@@ -1,0 +1,81 @@
+#+LATEX_HEADER: \usepackage[hyperref,x11names]{xcolor}
+
+* airxbcal prof structure
+
+| read     | calflag  | era      | emis     | *klayers* | *sarta*  | output   |
+|----------+----------+----------+----------+-----------+----------+----------|
+| robs1    | robs1    | robs1    | robs1    | plat      | plat     | robs1    |
+| rtime    | rtime    | rtime    | rtime    | plon      | plon     | rtime    |
+| rlat     | rlat     | rlat     | rlat     | ptime     | ptime    | rlat     |
+| rlon     | rlon     | rlon     | rlon     | stemp     | stemp    | rlon     |
+| zobs     | zobs     | zobs     | zobs     | salti     | salti    | zobs     |
+| findex   | findex   | findex   | findex   | spres     | spres    | findex   |
+| atrack   | atrack   | atrack   | atrack   | landfrac  | landfrac | atrack   |
+| xtrack   | xtrack   | xtrack   | xtrack   | landtype  | landtype | xtrack   |
+| satzen   | satzen   | satzen   | satzen   | wspeed    | wspeed   | satzen   |
+| solzen   | solzen   | solzen   | solzen   | nemis     | nemis    | solzen   |
+| landfrac | landfrac | landfrac | landfrac | efreq     | efreq    | landfrac |
+| salti    | salti    | salti    | salti    | emis      | emis     | salti    |
+| udef     | udef     | udef     | udef     | rho       | rho      | udef     |
+| iudef    | iudef    | iudef    | iudef    | nlevs     | nlevs    | iudef    |
+|          | calflag  | calflag  | calflag  | plevs     | plevs    | calflag  |
+|          |          | spres    | spres    | palts     | palts    | spres    |
+|          |          | stemp    | stemp    | ptemp     | ptemp    | stemp    |
+|          |          | wspeed   | wspeed   | gas_1     | gas_1    | wspeed   |
+|          |          | wsource  | wsource  | gas_2     | gas_2    | wsource  |
+|          |          | cfrac    | cfrac    | gas_3     | gas_3    | cfrac    |
+|          |          | plat     | plat     | gas_4     | gas_4    | plat     |
+|          |          | plon     | plon     | gas_5     | gas_5    | plon     |
+|          |          | ptemp    | ptemp    | gas_6     | gas_6    | ptemp    |
+|          |          | gas_1    | gas_1    | gas_9     | gas_9    | gas_1    |
+|          |          | gas_3    | gas_3    | gas_12    | gas_12   | gas_3    |
+|          |          | cc       | cc       | gtotal    | gtotal   | cc       |
+|          |          | clwc     | clwc     | gxover    | gxover   | clwc     |
+|          |          | ciwc     | ciwc     | txover    | txover   | ciwc     |
+|          |          | plevs    | plevs    | co2ppm    | co2ppm   | plevs    |
+|          |          | nlevs    | nlevs    | clrflag   | clrflag  | nlevs    |
+|          |          |          | nemis    | ctype     | ctype    | nemis    |
+|          |          |          | efreq    | cfrac     | cfrac    | efreq    |
+|          |          |          | emis     | cemis     | cemis    | emis     |
+|          |          |          | nrho     | crho      | crho     | nrho     |
+|          |          |          | rho      | cprtop    | cprtop   | rho      |
+|          |          |          |          | cprbot    | cprbot   | rcalc    |
+|          |          |          |          | cngwat    | cngwat   |          |
+|          |          |          |          | cpsize    | cpsize   |          |
+|          |          |          |          | cstemp    | cstemp   |          |
+|          |          |          |          | ctype2    | ctype2   |          |
+|          |          |          |          | cfrac2    | cfrac2   |          |
+|          |          |          |          | cemis2    | cemis2   |          |
+|          |          |          |          | crho2     | crho2    |          |
+|          |          |          |          | cprtop2   | cprtop2  |          |
+|          |          |          |          | cprbot2   | cprbot2  |          |
+|          |          |          |          | cngwat2   | cngwat2  |          |
+|          |          |          |          | cpsize2   | cpsize2  |          |
+|          |          |          |          | cstemp2   | cstemp2  |          |
+|          |          |          |          | cfrac12   | cfrac12  |          |
+|          |          |          |          | pobs      | pobs     |          |
+|          |          |          |          | zobs      | zobs     |          |
+|          |          |          |          | upwell    | upwell   |          |
+|          |          |          |          | scanang   | scanang  |          |
+|          |          |          |          | satzen    | satzen   |          |
+|          |          |          |          | satazi    | satazi   |          |
+|          |          |          |          | solzen    | solzen   |          |
+|          |          |          |          | solazi    | solazi   |          |
+|          |          |          |          | sundist   | sundist  |          |
+|          |          |          |          | glint     | glint    |          |
+|          |          |          |          | rlat      | rlat     |          |
+|          |          |          |          | rlon      | rlon     |          |
+|          |          |          |          | rtime     | rtime    |          |
+|          |          |          |          | findex    | findex   |          |
+|          |          |          |          | atrack    | atrack   |          |
+|          |          |          |          | xtrack    | xtrack   |          |
+|          |          |          |          | ifov      | ifov     |          |
+|          |          |          |          | robs1     | robs1    |          |
+|          |          |          |          | calflag   | calflag  |          |
+|          |          |          |          | robsqual  | robsqual |          |
+|          |          |          |          | freqcal   | freqcal  |          |
+|          |          |          |          | pnote     | pnote    |          |
+|          |          |          |          | udef      | udef     |          |
+|          |          |          |          | iudef     | iudef    |          |
+|          |          |          |          | itype     | itype    |          |
+|          |          |          |          |           | rcalc    |          |

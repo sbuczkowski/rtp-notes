@@ -1,0 +1,297 @@
+* AIRXBCAL
+** After hdf file read
+prof = 
+    'robs1'
+    'rtime'
+    'rlat'
+    'rlon'
+    'zobs'
+    'findex'
+    'atrack'
+    'xtrack'
+    'satzen'
+    'solzen'
+    'landfrac'
+    'salti'
+    'udef'
+    'iudef'
+*** robs1
+  Name         Size                   Bytes  Class     Attributes
+  c         2378x51933            493986696  single              
+*** rtime
+  Name      Size                Bytes  Class     Attributes
+  c         1x51933            415464  double              
+*** rlat
+  Name      Size                Bytes  Class     Attributes
+  c         1x51933            415464  double              
+*** rlon
+  Name      Size                Bytes  Class     Attributes
+  c         1x51933            415464  double              
+*** zobs
+  Name      Size                Bytes  Class     Attributes
+  c         1x51933            207732  single              
+*** findex
+  Name      Size                Bytes  Class    Attributes
+  c         1x51933            103866  int16              
+*** atrack
+  Name      Size                Bytes  Class    Attributes
+  c         1x51933            103866  int16              
+*** xtrack
+  Name      Size                Bytes  Class    Attributes
+  c         1x51933            103866  int16              
+*** satzen
+  Name      Size                Bytes  Class     Attributes
+  c         1x51933            207732  single              
+*** solzen
+  Name      Size                Bytes  Class     Attributes
+  c         1x51933            207732  single              
+*** landfrac
+  Name      Size                Bytes  Class     Attributes
+  c         1x51933            207732  single              
+*** salti
+  Name      Size                Bytes  Class     Attributes
+  c         1x51933            207732  single              
+*** udef
+  Name       Size                 Bytes  Class     Attributes
+  c         16x51933            3323712  single              
+*** iudef
+  Name      Size                Bytes  Class    Attributes
+  c         4x51933            415464  int16              
+** After calflag match
+Identical to prof after initial read /except/ for additional field *calflag*
+prof = 
+    'robs1'
+    'rtime'
+    'rlat'
+    'rlon'
+    'zobs'
+    'findex'
+    'atrack'
+    'xtrack'
+    'satzen'
+    'solzen'
+    'landfrac'
+    'salti'
+    'udef'
+    'iudef'
+    'calflag'
+*** calflag
+  Name         Size                   Bytes  Class    Attributes
+  c         2378x51933            123496674  uint8              
+** After fill_era
+Prof same as after calflags but with addition of fields from *spres* to *nlevs*
+prof = 
+    'robs1'
+    'rtime'
+    'rlat'
+    'rlon'
+    'zobs'
+    'findex'
+    'atrack'
+    'xtrack'
+    'satzen'
+    'solzen'
+    'landfrac'
+    'salti'
+    'udef'
+    'iudef'
+    'calflag'
+    'spres'
+    'stemp'
+    'wspeed'
+    'wsource'
+    'cfrac'
+    'plat'
+    'plon'
+    'ptemp'
+    'gas_1'
+    'gas_3'
+    'cc'
+    'clwc'
+    'ciwc'
+    'plevs'
+    'nlevs'
+*** spres
+  Name      Size                Bytes  Class     Attributes
+  c         1x51933            207732  single              
+*** stemp
+  Name      Size                Bytes  Class     Attributes
+  c         1x51933            207732  single              
+*** wspeed
+  Name      Size                Bytes  Class     Attributes
+  c         1x51933            207732  single              
+*** wsource
+  Name      Size                Bytes  Class     Attributes
+  c         1x51933            207732  single              
+*** cfrac
+  Name      Size                Bytes  Class     Attributes
+  c         1x51933            207732  single              
+*** plat
+  Name      Size                Bytes  Class     Attributes
+  c         1x51933            207732  single              
+*** plon
+  Name      Size                Bytes  Class     Attributes
+  c         1x51933            207732  single              
+*** ptemp
+  Name       Size                  Bytes  Class     Attributes
+  c         60x51933            12463920  single              
+*** gas_1
+  Name       Size                  Bytes  Class     Attributes
+  c         60x51933            12463920  single              
+*** gas_3
+  Name       Size                  Bytes  Class     Attributes
+  c         60x51933            12463920  single              
+*** cc
+  Name       Size                  Bytes  Class     Attributes
+  c         60x51933            12463920  single              
+*** clwc
+  Name       Size                  Bytes  Class     Attributes
+  c         60x51933            12463920  single              
+*** ciwc
+  Name       Size                  Bytes  Class     Attributes
+  c         60x51933            12463920  single              
+*** plevs
+  Name       Size                  Bytes  Class     Attributes
+  c         60x51933            12463920  single              
+*** nlevs
+  Name      Size                Bytes  Class    Attributes
+  c         1x51933            207732  int32              
+** After rtp_add_emis_danz
+Same as after fill_era but with addition of fields *nemis* to *rho*
+prof = 
+    'robs1'
+    'rtime'
+    'rlat'
+    'rlon'
+    'zobs'
+    'findex'
+    'atrack'
+    'xtrack'
+    'satzen'
+    'solzen'
+    'landfrac'
+    'salti'
+    'udef'
+    'iudef'
+    'calflag'
+    'spres'
+    'stemp'
+    'wspeed'
+    'wsource'
+    'cfrac'
+    'plat'
+    'plon'
+    'ptemp'
+    'gas_1'
+    'gas_3'
+    'cc'
+    'clwc'
+    'ciwc'
+    'plevs'
+    'nlevs'
+    'nemis'
+    'efreq'
+    'emis'
+    'nrho'
+    'rho'
+*** nemis
+  Name      Size                Bytes  Class     Attributes
+  c         1x51933            207732  single              
+*** efreq
+  Name        Size                  Bytes  Class     Attributes
+  c         100x51933            20773200  single              
+*** emis
+  Name        Size                  Bytes  Class     Attributes
+  c         100x51933            20773200  single              
+*** nrho
+  Name      Size                Bytes  Class     Attributes
+  c         1x51933            207732  single              
+*** rho
+  Name        Size                  Bytes  Class     Attributes
+  c         100x51933            20773200  single              
+** After running klayers
+Klayers seems to leave *prof* (as well as pattr, head, hattr)
+unchanged. I am judging this by structure and structure element size
+and type. These are unchanged after klayers. However, this does not
+mean that the values stored in the fields are the same just that they
+have the same type and quantity as before. This begs the question,
+what /does/ klayers do and where does it put this information?
+
+prof = 
+    'robs1'
+    'rtime'
+    'rlat'
+    'rlon'
+    'zobs'
+    'findex'
+    'atrack'
+    'xtrack'
+    'satzen'
+    'solzen'
+    'landfrac'
+    'salti'
+    'udef'
+    'iudef'
+    'calflag'
+    'spres'
+    'stemp'
+    'wspeed'
+    'wsource'
+    'cfrac'
+    'plat'
+    'plon'
+    'ptemp'
+    'gas_1'
+    'gas_3'
+    'cc'
+    'clwc'
+    'ciwc'
+    'plevs'
+    'nlevs'
+    'nemis'
+    'efreq'
+    'emis'
+    'nrho'
+    'rho'
+** After running sarta
+Adds *rcalc*
+prof = 
+    'robs1'
+    'rtime'
+    'rlat'
+    'rlon'
+    'zobs'
+    'findex'
+    'atrack'
+    'xtrack'
+    'satzen'
+    'solzen'
+    'landfrac'
+    'salti'
+    'udef'
+    'iudef'
+    'calflag'
+    'spres'
+    'stemp'
+    'wspeed'
+    'wsource'
+    'cfrac'
+    'plat'
+    'plon'
+    'ptemp'
+    'gas_1'
+    'gas_3'
+    'cc'
+    'clwc'
+    'ciwc'
+    'plevs'
+    'nlevs'
+    'nemis'
+    'efreq'
+    'emis'
+    'nrho'
+    'rho'
+    'rcalc'
+*** rcalc
+  Name         Size                   Bytes  Class     Attributes
+  c         2378x51933            493986696  single              

@@ -1,0 +1,208 @@
+* AIRXBCAL
+infilepath = '/asl/data/airs/AIRXBCAL/2014/048';
+infile='AIRS.2014.02.17.L1B.Cal_Subset.v5.0.22.0.G14049211309.hdf';
+[prof, pattr, aux] = read_airxbcal(fullfile(infilepath, infile));
+
+** head
+head = struct;
+head.pfields = 4;  % robs1, no calcs in file
+head.ptype = 0;    
+head.ngas = 0;
+
+nchan = size(prof.robs1,1);
+chani = (1:nchan)';
+vchan = aux.nominal_freq(:);
+
+% Assign header variables
+head.instid = 800; % AIRS 
+head.pltfid = -9999;
+head.nchan = length(chani);
+head.ichan = chani;
+head.vchan = vchan(chani);
+head.vcmax = max(head.vchan);
+head.vcmin = min(head.vchan);
+
+** hattr
+hattr={ {'header' 'pltfid' 'Aqua'}, ...
+        {'header' 'instid' 'AIRS'} };
+
+
+** pattr
+*** size/type
+whos pattr
+  Name       Size            Bytes  Class    Attributes
+
+  pattr      1x22            12406  cell               
+** aux
+*** size/type
+whos aux
+  Name      Size              Bytes  Class     Attributes
+
+  aux       1x1             2875530  struct              
+
+*** fieldnames(aux)
+ans = 
+
+    'NeN'
+    'CalChanSummary'
+    'nominal_freq'
+**** NeN = aux.NeN;
+whos NeN
+  Name         Size               Bytes  Class     Attributes
+
+  NeN       2378x241            2292392  single              
+
+**** CalChanSummary = aux.CalChanSummary;
+whos CalChanSummary
+  Name                   Size              Bytes  Class    Attributes
+
+  CalChanSummary      2378x241            573098  uint8              
+
+**** nominal_freq = aux.nominal_freq;
+whos nominal_freq
+  Name                 Size            Bytes  Class     Attributes
+
+  nominal_freq      2378x1              9512  single              
+
+** prof
+*** size/type
+whos prof
+  Name      Size                Bytes  Class     Attributes
+
+  prof      1x1             500324986  struct              
+*** fieldnames
+fieldnames(prof)
+
+ans = 
+
+    'robs1'
+    'rtime'
+    'rlat'
+    'rlon'
+    'zobs'
+    'findex'
+    'atrack'
+    'xtrack'
+    'satzen'
+    'solzen'
+    'landfrac'
+    'salti'
+    'udef'
+    'iudef'
+
+**** robs1 = prof.robs1;
+whos robs1
+  Name          Size                   Bytes  Class     Attributes
+
+  robs1      2378x51933            493986696  single              
+
+**** rtime = prof.rtime
+whos rtime
+  Name       Size                Bytes  Class     Attributes
+
+  rtime      1x51933            415464  double              
+
+**** rlat = prof.rlat;
+whos rlat
+  Name      Size                Bytes  Class     Attributes
+
+  rlat      1x51933            415464  double              
+
+**** rlon = prof.rlon
+whos rlon
+  Name      Size                Bytes  Class     Attributes
+
+  rlon      1x51933            415464  double              
+
+**** zobs = prof.zobs;
+whos zobs
+  Name      Size                Bytes  Class     Attributes
+
+  zobs      1x51933            207732  single              
+
+**** findex = prof.findex;
+whos findex
+  Name        Size                Bytes  Class    Attributes
+
+  findex      1x51933            103866  int16              
+
+**** atrack = prof.atrack;
+whos atrack
+  Name        Size                Bytes  Class    Attributes
+
+  atrack      1x51933            103866  int16              
+
+**** xtrack = prof.xtrack;
+whos xtrack
+  Name        Size                Bytes  Class    Attributes
+
+  xtrack      1x51933            103866  int16              
+
+**** satzen = prof.satzen;
+whos satzen
+  Name        Size                Bytes  Class     Attributes
+
+  satzen      1x51933            207732  single              
+
+**** solzen = prof.solzen;
+whos solzen
+  Name        Size                Bytes  Class     Attributes
+
+  solzen      1x51933            207732  single              
+
+**** landfrac = prof.landfrac;
+whos landfrac
+  Name          Size                Bytes  Class     Attributes
+
+  landfrac      1x51933            207732  single              
+
+**** salti = prof.salti;
+whos salti
+  Name       Size                Bytes  Class     Attributes
+
+  salti      1x51933            207732  single              
+
+**** udef = prof.udef;
+whos udef
+  Name       Size                 Bytes  Class     Attributes
+
+  udef      16x51933            3323712  single              
+
+***** udef(:,1)
+ans =
+
+   1.0e+03 *
+
+   -0.0001
+    0.0013
+    0.0005
+    0.0007
+    0.2551
+    0.2573
+    0.0005
+    0.0015
+    0.0005
+    1.5670
+    0.0005
+    0.0004
+    0.0004
+    0.0409
+    0.0212
+    0.0145
+
+**** iudef = prof.iudef;
+whos iudef
+  Name       Size                Bytes  Class    Attributes
+
+  iudef      4x51933            415464  int16              
+
+***** iudef(:,1)
+ans =
+
+      1
+      0
+     -3
+     68
+
+* AIRIBRAD
+* CRiS

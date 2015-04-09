@@ -1,0 +1,124 @@
+% Created 2015-04-09 Thu 13:09
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{hyperref}
+%\usepackage[hyperref,x11names]{xcolor}
+\usepackage{colortbl}
+
+\definecolor{Gray}{gray}{0.85}
+\definecolor{c1}{rgb}{0.75,1,1}
+\definecolor{c2}{rgb}{0.80,1,1}
+\definecolor{c3}{rgb}{0.85,1,1}
+\definecolor{c4}{rgb}{0.88,1,1}
+\definecolor{Red}{red}{0.88}
+\definecolor{LightGreen}{green}{0.88}
+
+\newcolumntype{a}{>{\columncolor{Gray}}l}
+\newcolumntype{b}{>{\columncolor{white}}l}
+
+
+\title{rtp_prof_table}
+\author{Steven Buczkowski}
+\date{09 April 2015}
+
+\begin{document}
+
+\maketitle
+
+\setcounter{tocdepth}{3}
+\tableofcontents
+\vspace*{1cm}
+
+\section{airxbcal prof structure}
+\label{sec-1}
+
+
+
+\begin{center}
+\begin{tabular}{lllllll}
+ read      &  calflag   &  era       &  emis      &  \textbf{klayers}      &  \textbf{sarta}        &  output    \\
+\hline
+ {\cellcolor[c1]{0.8}} robs1     &  robs1     &  robs1     &  robs1     &  plat                  &  plat                  &  robs1     \\
+ rtime     &  rtime     &  rtime     &  rtime     &  plon                  &  plon                  &  rtime     \\
+ rlat      &  rlat      &  rlat      &  rlat      &  ptime                 &  ptime                 &  rlat      \\
+ rlon      &  rlon      &  rlon      &  rlon      &  stemp                 &  stemp                 &  rlon      \\
+ zobs      &  zobs      &  zobs      &  zobs      &  salti                 &  salti                 &  zobs      \\
+ findex    &  findex    &  findex    &  findex    &  spres                 &  spres                 &  findex    \\
+ atrack    &  atrack    &  atrack    &  atrack    &  landfrac              &  landfrac              &  atrack    \\
+ xtrack    &  xtrack    &  xtrack    &  xtrack    &  landtype              &  landtype              &  xtrack    \\
+ satzen    &  satzen    &  satzen    &  satzen    &  wspeed                &  wspeed                &  satzen    \\
+ solzen    &  solzen    &  solzen    &  solzen    &  nemis                 &  nemis                 &  solzen    \\
+ landfrac  &  landfrac  &  landfrac  &  landfrac  &  efreq                 &  efreq                 &  landfrac  \\
+ salti     &  salti     &  salti     &  salti     &  emis                  &  emis                  &  salti     \\
+ udef      &  udef      &  udef      &  udef      &  rho                   &  rho                   &  udef      \\
+ iudef     &  iudef     &  iudef     &  iudef     &  nlevs                 &  nlevs                 &  iudef     \\
+           &  calflag   &  calflag   &  calflag   &  plevs                 &  plevs                 &  calflag   \\
+           &            &  spres     &  spres     &  palts                 &  palts                 &  spres     \\
+           &            &  stemp     &  stemp     &  ptemp                 &  ptemp                 &  stemp     \\
+           &            &  wspeed    &  wspeed    &  gas$_1$               &  gas$_1$               &  wspeed    \\
+           &            &  wsource   &  wsource   &  gas$_2$               &  gas$_2$               &  wsource   \\
+           &            &  cfrac     &  cfrac     &  gas$_3$               &  gas$_3$               &  cfrac     \\
+           &            &  plat      &  plat      &  gas$_4$               &  gas$_4$               &  plat      \\
+           &            &  plon      &  plon      &  gas$_5$               &  gas$_5$               &  plon      \\
+           &            &  ptemp     &  ptemp     &  gas$_6$               &  gas$_6$               &  ptemp     \\
+           &            &  gas$_1$   &  gas$_1$   &  gas$_9$               &  gas$_9$               &  gas$_1$   \\
+           &            &  gas$_3$   &  gas$_3$   &  gas$_{\mathrm{12\}}$  &  gas$_{\mathrm{12\}}$  &  gas$_3$   \\
+           &            &  cc        &  cc        &  gtotal                &  gtotal                &  cc        \\
+           &            &  clwc      &  clwc      &  gxover                &  gxover                &  clwc      \\
+           &            &  ciwc      &  ciwc      &  txover                &  txover                &  ciwc      \\
+           &            &  plevs     &  plevs     &  co2ppm                &  co2ppm                &  plevs     \\
+           &            &  nlevs     &  nlevs     &  clrflag               &  clrflag               &  nlevs     \\
+           &            &            &  nemis     &  ctype                 &  ctype                 &  nemis     \\
+           &            &            &  efreq     &  cfrac                 &  cfrac                 &  efreq     \\
+           &            &            &  emis      &  cemis                 &  cemis                 &  emis      \\
+           &            &            &  nrho      &  crho                  &  crho                  &  nrho      \\
+           &            &            &  rho       &  cprtop                &  cprtop                &  rho       \\
+           &            &            &            &  cprbot                &  cprbot                &  rcalc     \\
+           &            &            &            &  cngwat                &  cngwat                &            \\
+           &            &            &            &  cpsize                &  cpsize                &            \\
+           &            &            &            &  cstemp                &  cstemp                &            \\
+           &            &            &            &  ctype2                &  ctype2                &            \\
+           &            &            &            &  cfrac2                &  cfrac2                &            \\
+           &            &            &            &  cemis2                &  cemis2                &            \\
+           &            &            &            &  crho2                 &  crho2                 &            \\
+           &            &            &            &  cprtop2               &  cprtop2               &            \\
+           &            &            &            &  cprbot2               &  cprbot2               &            \\
+           &            &            &            &  cngwat2               &  cngwat2               &            \\
+           &            &            &            &  cpsize2               &  cpsize2               &            \\
+           &            &            &            &  cstemp2               &  cstemp2               &            \\
+           &            &            &            &  cfrac12               &  cfrac12               &            \\
+           &            &            &            &  pobs                  &  pobs                  &            \\
+           &            &            &            &  zobs                  &  zobs                  &            \\
+           &            &            &            &  upwell                &  upwell                &            \\
+           &            &            &            &  scanang               &  scanang               &            \\
+           &            &            &            &  satzen                &  satzen                &            \\
+           &            &            &            &  satazi                &  satazi                &            \\
+           &            &            &            &  solzen                &  solzen                &            \\
+           &            &            &            &  solazi                &  solazi                &            \\
+           &            &            &            &  sundist               &  sundist               &            \\
+           &            &            &            &  glint                 &  glint                 &            \\
+           &            &            &            &  rlat                  &  rlat                  &            \\
+           &            &            &            &  rlon                  &  rlon                  &            \\
+           &            &            &            &  rtime                 &  rtime                 &            \\
+           &            &            &            &  findex                &  findex                &            \\
+           &            &            &            &  atrack                &  atrack                &            \\
+           &            &            &            &  xtrack                &  xtrack                &            \\
+           &            &            &            &  ifov                  &  ifov                  &            \\
+           &            &            &            &  robs1                 &  robs1                 &            \\
+           &            &            &            &  calflag               &  calflag               &            \\
+           &            &            &            &  robsqual              &  robsqual              &            \\
+           &            &            &            &  freqcal               &  freqcal               &            \\
+           &            &            &            &  pnote                 &  pnote                 &            \\
+           &            &            &            &  udef                  &  udef                  &            \\
+           &            &            &            &  iudef                 &  iudef                 &            \\
+           &            &            &            &  itype                 &  itype                 &            \\
+           &            &            &            &                        &  rcalc                 &            \\
+\end{tabular}
+\end{center}
+
+
+
+\end{document}
